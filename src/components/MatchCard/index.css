@@ -1,0 +1,18 @@
+.match-card-container {
+  width: 45%;
+  background-color: #0f172a;
+  list-style-type: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.match-card-container > img {
+  height: 100px;
+  width: 100px;
+}

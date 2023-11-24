@@ -1,0 +1,47 @@
+.latest-Matches-container {
+  width: 95vw;
+  margin-top: 20px;
+}
+.latest-Matches-container > p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+.latest-match-info-top {
+  background-color: #0f172a;
+  border-radius: 15px;
+  color: #fff;
+}
+.competing-team-details-and-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.competing-team-details-and-logo > img {
+  height: 100px;
+}
+.competing-team-imp-details {
+  font-size: 20px;
+}
+
+.hr-line {
+  background-color: #fff;
+  height: 3px;
+  outline: none;
+  border: none;
+}
+
+.latest-match-info-bottom {
+  padding: 20px;
+}
+
+.latest-match-info-bottom > p:nth-child(odd) {
+  font-size: 20px;
+}
+.latest-match-info-bottom > p:nth-child(even) {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
