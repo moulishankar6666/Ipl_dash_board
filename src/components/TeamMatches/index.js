@@ -13,7 +13,7 @@ const apiStatus = {
   failure: 'failure',
 }
 
-class TeamDetails extends Component {
+class TeamMatches extends Component {
   state = {teamDetails: {}, status: apiStatus.initial}
 
   componentDidMount() {
@@ -26,9 +26,6 @@ class TeamDetails extends Component {
     const {params} = match
     const {id} = params
 
-    const options = {
-      method: 'GET',
-    }
     try {
       const response = await fetch(`https://apis.ccbp.in/ipl/${id}`)
       const data = await response.json()
@@ -40,6 +37,10 @@ class TeamDetails extends Component {
 
   onSuccessView = () => {
     const {teamDetails} = this.state
+    const goToHome = () => {
+      const {history} = this.props
+      history.push('/')
+    }
 
     return (
       <>
@@ -52,6 +53,9 @@ class TeamDetails extends Component {
             <MatchCard key={eachMatch.id} match={eachMatch} />
           ))}
         </ul>
+        <button onClick={goToHome} className="back-button" type="button">
+          Back
+        </button>
       </>
     )
   }
@@ -78,4 +82,4 @@ class TeamDetails extends Component {
     return <div className="ipl-team-details-container">{this.renderView()}</div>
   }
 }
-export default TeamDetails
+export default TeamMatches
